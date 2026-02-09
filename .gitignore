@@ -1,3 +1,8 @@
+# SvelteKit / Node
+node_modules/
+.svelte-kit/
+build/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -14,7 +19,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# Python lib - but NOT src/lib (SvelteKit)
+/lib/
 lib64/
 parts/
 sdist/
