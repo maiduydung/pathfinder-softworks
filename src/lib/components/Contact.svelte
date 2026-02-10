@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { PUBLIC_WEB3FORMS_KEY } from "$env/static/public";
 	import { inview } from "$lib/actions/inview";
+
+	const WEB3FORMS_KEY = "63a2e7aa-90e1-4413-8ecc-29dcbfda849b";
 
 	let name = $state("");
 	let email = $state("");
@@ -16,7 +17,7 @@
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
-					access_key: PUBLIC_WEB3FORMS_KEY,
+					access_key: WEB3FORMS_KEY,
 					name,
 					email,
 					message,
