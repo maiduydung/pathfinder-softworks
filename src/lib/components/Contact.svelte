@@ -78,7 +78,7 @@
 						maiduydungvn@gmail.com
 					</a>
 					<a
-						href="https://www.linkedin.com/in/maiduydung/"
+						href="https://www.linkedin.com/company/pathfinder-softworks"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-center gap-3 text-text transition-colors hover:text-primary"
