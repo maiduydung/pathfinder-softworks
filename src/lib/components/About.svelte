@@ -4,31 +4,35 @@
 	const team = [
 		{
 			name: "Mai Duy Dung",
-			role: "Data & AI",
+			role: "Founder - Data & AI",
+			linkedin: "https://www.linkedin.com/in/maiduydung/",
 			description:
-				"AI/ML, web scraping, ETL pipelines, anomaly detection, microservices. Built systems for teams in Tokyo, Shanghai, Vancouver, New York, and San Francisco.",
+				"Earned a scholarship to Japan, then shipped AI pipelines across Tokyo, Shanghai, Vancouver, and San Francisco. ML engineer who builds under pressure and founded Pathfinder to do it for clients.",
 			image: "/dung_avatar.jpg",
 		},
 		{
-			name: "Designer",
+			name: "Felicjan (Felix) Pavlak-Chiaradia",
 			role: "Product Design",
+			linkedin: "https://www.linkedin.com/in/felicjanp-c/",
 			description:
-				"Figma, market research, UX strategy, sales design. If you're looking at this site: that's his work. Turns complex products into interfaces people actually want to use.",
-			image: null,
+				"Industrial design degree from Dublin, exchange semester at SF State, then straight into founding lead designer at Proplytics, where he built the entire design system from scratch. Multilingual, design-obsessed, and now designing products for our clients.",
+			image: "/felix_avatar.jpg",
 		},
 		{
-			name: "Full-Stack Engineer",
-			role: "Engineering",
+			name: "Quang Than",
+			role: "Full-Stack Engineer",
+			linkedin: "https://www.linkedin.com/in/quangthan/",
 			description:
-				"React, Next.js, full-stack development. Builds production-grade web applications end to end, from database schema to deployed product.",
-			image: null,
+				"Started as an automation engineer in industrial plants, taught himself to code, went freelance, then shipped production apps at three companies before joining us. 10+ years of building things that work under pressure. Now he builds ours.",
+			image: "/quang_avatar.jpg",
 		},
 		{
-			name: "Marketing Lead",
-			role: "Growth & Outreach",
+			name: "Thao (Flora) Do",
+			role: "Marketing Lead",
+			linkedin: "https://www.linkedin.com/in/quynhthao99/",
 			description:
-				"Outreach, LinkedIn, cold calls, intros, content strategy. Gets the right people in front of the right product.",
-			image: null,
+				"From Shopee campaigns in Vietnam to Google Ads across APAC, SEO in the US, and sales development in Malaysia. Colleagues call her 'the extra mile person.' She gets your product in front of the right people.",
+			image: "/thao_avatar.jpg",
 		},
 	];
 </script>
@@ -52,8 +56,11 @@
 					class="rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md"
 					use:inview={i * 100}
 				>
-					<div
-						class="mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-primary-light"
+					<a
+						href={member.linkedin}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-primary-light transition-opacity hover:opacity-80"
 					>
 						{#if member.image}
 							<img
@@ -76,14 +83,21 @@
 								/>
 							</svg>
 						{/if}
-					</div>
+					</a>
 					<p
 						class="text-sm font-semibold uppercase tracking-wide text-primary"
 					>
 						{member.role}
 					</p>
 					<h3 class="mt-1 text-lg font-semibold text-heading">
-						{member.name}
+						<a
+							href={member.linkedin}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary/60"
+						>
+							{member.name}
+						</a>
 					</h3>
 					<p class="mt-2 text-sm text-text">{member.description}</p>
 				</div>
@@ -95,8 +109,12 @@
 			use:inview
 		>
 			<p class="text-lg text-text">
-				We built <span class="font-semibold text-heading"
-					>Proplytics</span
+				We built <a
+					href="https://www.linkedin.com/company/proplytics/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="font-semibold text-primary underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary-hover hover:decoration-primary/60"
+					>Proplytics</a
 				> together. A full real estate SaaS platform with financial analytics
 				that none competing platforms don't offer. That's the kind of team
 				you're hiring. Not freelancers pieced together for one project. A

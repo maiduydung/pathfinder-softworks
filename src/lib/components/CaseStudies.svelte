@@ -11,6 +11,7 @@
 	const studies = [
 		{
 			title: "Proplytics",
+			link: "https://www.linkedin.com/company/proplytics/",
 			subtitle: "SaaS Platform",
 			metric: "Hours → Seconds",
 			metricDetail: "per investment analysis",
@@ -30,6 +31,7 @@
 		},
 		{
 			title: "AI-Powered Deal Sourcing Tool",
+			link: null,
 			subtitle: "AI Product",
 			metric: "Zero",
 			metricDetail: "manual processing needed",
@@ -49,13 +51,14 @@
 		},
 		{
 			title: "Nhu Tin",
+			link: "https://nhutin.com/",
 			subtitle: "Digital Transformation",
 			metric: "30 min → Instant",
 			metricDetail: "per build calculation",
 			summary:
-				"Replaced 30-minute manual material calculations with instant, constraint-aware optimization for a container manufacturer: protecting margins on every order without changing their existing workflow.",
+				"Nhu Tin is a Vietnamese corporation specializing in industrial biomass fuel and automatic unloading systems for trucks and container trailers. We replaced their 30-minute manual Bill of Materials calculations with instant, constraint-aware optimization: protecting margins on every order without changing their existing workflow.",
 			problem:
-				"Container manufacturing runs on razor-thin margins. Every order required manual material calculations taking 30+ minutes: leading to slow quoting, inconsistent margins, and zero visibility into profitability. Everything lived in Vietnamese-language Excel spreadsheets.",
+				"Nhu Tin's manufacturing operations run on razor-thin margins. For every order, the team manually calculated optimal materials in Excel spreadsheets (Vietnamese-language), taking 30+ minutes per quote. This meant slow quoting, inconsistent margins, zero visibility into profitability, and inventory tracked by hand.",
 			solution:
 				"Three-part system: Bill of Materials optimizer with 4-phase algorithm, automated inventory ingestion from existing Google Drive Excel files, and a unified operations web application: all without disrupting their existing workflow.",
 			results: [
@@ -95,10 +98,12 @@
 						<div class="flex items-start justify-between gap-4">
 							<div class="flex-1">
 								<div class="flex flex-wrap items-center gap-3">
-									<h3
-										class="text-xl font-semibold text-heading"
-									>
-										{study.title}
+									<h3 class="text-xl font-semibold text-heading">
+										{#if study.link}
+											<a href={study.link} target="_blank" rel="noopener noreferrer" class="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary/60" onclick={(e) => e.stopPropagation()}>{study.title}</a>
+										{:else}
+											{study.title}
+										{/if}
 									</h3>
 									<span
 										class="rounded-full bg-primary-light px-3 py-1 text-xs font-medium text-primary"

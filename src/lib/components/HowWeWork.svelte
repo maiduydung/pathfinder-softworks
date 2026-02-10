@@ -43,7 +43,7 @@
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 			{#each steps as step, i}
 				<div class="relative" use:inview={i * 120}>
-					<span class="text-5xl font-bold text-primary/10"
+					<span class="text-6xl font-extrabold text-primary/30"
 						>{step.number}</span
 					>
 					<h3 class="mt-2 text-xl font-semibold text-heading">
