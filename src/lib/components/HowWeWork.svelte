@@ -2,23 +2,23 @@
 	const steps = [
 		{
 			number: '01',
-			title: 'Understand',
-			description: 'We listen first. What does your business actually do? Where does it hurt? What have you already tried?'
+			title: 'Discovery',
+			description: 'We learn your business, your users, and the outcome you need. No generic questionnaires — we dig into what actually matters to your bottom line.'
 		},
 		{
 			number: '02',
-			title: 'Diagnose',
-			description: 'We dig into the systems, data, and workflows. We find what\'s actually broken — not what looks broken on the surface.'
+			title: 'Design & Plan',
+			description: 'Our designer maps out the UX. Our engineers plan the architecture. You see mockups and a clear roadmap before a single line of code is written.'
 		},
 		{
 			number: '03',
-			title: 'Fix',
-			description: 'We build or repair what matters most. No overhauls. No grand redesigns. Targeted work that moves the needle.'
+			title: 'Build & Ship',
+			description: 'Iterative development with demos every week. You see real progress, not status reports. We ship working software, not slide decks.'
 		},
 		{
 			number: '04',
-			title: 'Hand off',
-			description: 'We leave you with systems your team can run, documentation they can follow, and clarity that lasts after we\'re gone.'
+			title: 'Measure & Iterate',
+			description: 'We track the outcomes we promised — time saved, costs cut, revenue generated. Then we optimize based on real data, not assumptions.'
 		}
 	];
 </script>
@@ -28,7 +28,7 @@
 		<div class="mb-12 max-w-2xl">
 			<h2 class="text-3xl font-bold text-heading md:text-4xl">How we work</h2>
 			<p class="mt-4 text-lg text-text">
-				Simple, clear, no surprises.
+				Outcome-first, every step of the way.
 			</p>
 		</div>
 

@@ -168,7 +168,7 @@ Five interconnected systems forming a complete data-to-decision pipeline:
 - Continuous data freshness — daemon-based re-classification on data changes, 6-second RSS monitoring, and on-demand model retraining
 
 **Results:**
-- Continuously scrapes and enriches company profiles from 4+ platforms and Japan's largest press release distributor
+- Continuously scrapes and enriches company profiles from 40+ platforms and Japan's largest press release distributor
 - Processes articles bilingually with automated industry, theme, and geography classification
 - Classifies company revenue models at scale using dual-language ML with sub-second inference
 - Generates personalized investment ratings tailored to each investor's specific criteria

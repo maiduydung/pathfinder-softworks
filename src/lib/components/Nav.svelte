@@ -49,7 +49,7 @@
 				rel="noopener noreferrer"
 				class="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
 			>
-				Let's talk
+				Book a free call
 			</a>
 		</div>
 
@@ -88,7 +88,7 @@
 				class="mt-2 inline-block rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
 				onclick={closeMobile}
 			>
-				Let's talk
+				Book a free call
 			</a>
 		</div>
 	{/if}

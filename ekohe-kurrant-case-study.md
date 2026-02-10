@@ -124,7 +124,7 @@ Company data goes stale fast. The revenue classifier runs as a daemon that watch
 
 ## Results
 
-- Continuously scrapes and enriches company profiles from 4+ social platforms and Japan's largest press release distributor
+- Continuously scrapes and enriches company profiles from 40+ social platforms and Japan's largest press release distributor
 - Processes articles bilingually (Japanese/English) with automated industry, theme, and geography classification
 - Classifies company revenue models at scale using dual-language ML models with sub-second inference
 - Generates personalized investment ratings for every company in the database, tailored to each investor's specific criteria

@@ -42,13 +42,13 @@
 		<div class="grid gap-12 lg:grid-cols-2">
 			<div>
 				<h2 class="text-3xl font-bold text-heading md:text-4xl">
-					Let's talk
+					Let's build something
 				</h2>
 				<p class="mt-4 text-lg text-text">
-					If parts of this page felt uncomfortably familiar, we should probably talk.
+					Got a product idea? A process that's bleeding time and money? A spreadsheet that should've been software three years ago?
 				</p>
 				<p class="mt-2 text-text">
-					No pressure. No sales script. Just a short call to see if there's something worth fixing.
+					Tell us the outcome you need. We'll tell you exactly how we'd get there — and what it would take.
 				</p>
 
 				<div class="mt-8 space-y-4">
@@ -81,7 +81,7 @@
 						<svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
 						</svg>
-						Book a call on Calendly
+						Book a free call
 					</a>
 				</div>
 			</div>
@@ -111,14 +111,14 @@
 						/>
 					</div>
 					<div>
-						<label for="message" class="block text-sm font-medium text-heading">Message</label>
+						<label for="message" class="block text-sm font-medium text-heading">What outcome are you looking for?</label>
 						<textarea
 							id="message"
 							bind:value={message}
 							required
 							rows="4"
 							class="mt-1 w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-heading placeholder-text/40 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
-							placeholder="Tell us what's going on..."
+							placeholder="e.g. I need a platform that..., We're spending too much time on..., We want to automate..."
 						></textarea>
 					</div>
 					<button
@@ -131,14 +131,14 @@
 						{:else if status === 'sent'}
 							Message sent!
 						{:else}
-							Send message
+							Get in touch
 						{/if}
 					</button>
 					{#if status === 'error'}
 						<p class="text-sm text-red-600">Something went wrong. Please try emailing us directly.</p>
 					{/if}
 					{#if status === 'sent'}
-						<p class="text-sm text-green-600">Thanks! We'll get back to you soon.</p>
+						<p class="text-sm text-green-600">Thanks! We'll get back to you within 24 hours.</p>
 					{/if}
 				</form>
 			</div>
