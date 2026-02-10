@@ -1,6 +1,10 @@
+<script lang="ts">
+	import { inview } from "$lib/actions/inview";
+</script>
+
 <section class="bg-white py-20 md:py-28">
 	<div class="mx-auto max-w-6xl px-6">
-		<div class="mb-12 text-center">
+		<div class="mb-12 text-center" use:inview>
 			<h2 class="text-3xl font-bold text-heading md:text-4xl">
 				Real outcomes from real projects
 			</h2>
@@ -12,7 +16,8 @@
 
 		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 			<div
-				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm"
+				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+				use:inview={0}
 			>
 				<p class="text-4xl font-bold text-primary">30 min</p>
 				<p class="text-lg font-semibold text-heading">to instant</p>
@@ -22,7 +27,8 @@
 			</div>
 
 			<div
-				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm"
+				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+				use:inview={100}
 			>
 				<p class="text-4xl font-bold text-primary">96.73%</p>
 				<p class="text-lg font-semibold text-heading">ROI surfaced</p>
@@ -32,19 +38,21 @@
 			</div>
 
 			<div
-				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm"
+				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+				use:inview={200}
 			>
 				<p class="text-4xl font-bold text-primary">Zero</p>
 				<p class="text-lg font-semibold text-heading">
 					manual processing
 				</p>
 				<p class="mt-2 text-sm text-text">
-					Raw data to scored opportunities — fully automated
+					Raw data to scored opportunities, fully automated
 				</p>
 			</div>
 
 			<div
-				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm"
+				class="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+				use:inview={300}
 			>
 				<p class="text-4xl font-bold text-primary">40+</p>
 				<p class="text-lg font-semibold text-heading">
@@ -56,7 +64,7 @@
 			</div>
 		</div>
 
-		<p class="mt-10 text-center text-text">
+		<p class="mt-10 text-center text-text" use:inview>
 			Every project starts with one question: <span
 				class="font-semibold text-heading"
 				>what's the measurable outcome you need?</span

@@ -47,7 +47,7 @@
 				href="https://calendly.com/maiduydungvn/meeting-with-mai"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
+				class="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/25"
 			>
 				Book a free call
 			</a>

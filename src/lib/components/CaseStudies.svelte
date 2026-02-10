@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { inview } from "$lib/actions/inview";
+	import { slide } from "svelte/transition";
+
 	let expanded = $state<number | null>(null);
 
 	function toggle(index: number) {
@@ -12,7 +15,7 @@
 			metric: "Hours → Seconds",
 			metricDetail: "per investment analysis",
 			summary:
-				"A real estate investment platform that surfaces ROI, cap rate, cash flow, and financial breakdowns per property — metrics even Zillow doesn't offer. Investors go from hours of spreadsheet modeling to instant, confidence-scored decisions.",
+				"A real estate investment platform that surfaces ROI, cap rate, cash flow, and financial breakdowns per property: metrics even Zillow doesn't offer. Investors go from hours of spreadsheet modeling to instant, confidence-scored decisions.",
 			problem:
 				"Real estate investors waste hours pulling data from Zillow, Airbnb, county records, and running spreadsheet models to evaluate a single property. For portfolio investors analyzing dozens of properties across markets, this process doesn't scale.",
 			solution:
@@ -20,7 +23,7 @@
 			results: [
 				"Investment analysis that took hours delivered in under 3 seconds",
 				"Financial metrics (ROI, cap rate, cash flow) no competitor surfaces",
-				"Confidence scoring on every data point — no unverified guesses",
+				"Confidence scoring on every data point: no unverified guesses",
 				"Property financial breakdowns: mortgage, PMI, taxes, insurance, year-by-year projections",
 			],
 			tech: "Next.js, TypeScript, Python, FastAPI, Azure, DuckDB, Stripe",
@@ -31,13 +34,13 @@
 			metric: "Zero",
 			metricDetail: "manual processing needed",
 			summary:
-				"An automated pipeline for venture capital that scrapes company data across 40+ platforms, processes bilingual content (Japanese & English), and delivers personalized investment scores — completely hands-off.",
+				"An automated pipeline for venture capital that scrapes company data across 40+ platforms, processes bilingual content (Japanese & English), and delivers personalized investment scores: completely hands-off.",
 			problem:
 				"VC investors evaluating early-stage companies can't scale manual research. Company information is scattered across social platforms and press releases in multiple languages. By the time they finish researching, the deal window has closed.",
 			solution:
 				"Five interconnected systems: distributed web scraping, bilingual news pipeline (Japanese/English), AI-powered enrichment with NLP, revenue stream classifier, and investor-specific scoring engine with personalized ratings.",
 			results: [
-				"Fully automated pipeline — raw data to scored opportunities",
+				"Fully automated pipeline: raw data to scored opportunities",
 				"Bilingual processing across Japanese and English sources",
 				"Personalized investment ratings matching each investor's criteria",
 				"Deals surfaced before competitors even finish their research",
@@ -50,16 +53,16 @@
 			metric: "30 min → Instant",
 			metricDetail: "per build calculation",
 			summary:
-				"Replaced 30-minute manual material calculations with instant, constraint-aware optimization for a container manufacturer — protecting margins on every order without changing their existing workflow.",
+				"Replaced 30-minute manual material calculations with instant, constraint-aware optimization for a container manufacturer: protecting margins on every order without changing their existing workflow.",
 			problem:
-				"Container manufacturing runs on razor-thin margins. Every order required manual material calculations taking 30+ minutes — leading to slow quoting, inconsistent margins, and zero visibility into profitability. Everything lived in Vietnamese-language Excel spreadsheets.",
+				"Container manufacturing runs on razor-thin margins. Every order required manual material calculations taking 30+ minutes: leading to slow quoting, inconsistent margins, and zero visibility into profitability. Everything lived in Vietnamese-language Excel spreadsheets.",
 			solution:
-				"Three-part system: Bill of Materials optimizer with 4-phase algorithm, automated inventory ingestion from existing Google Drive Excel files, and a unified operations web application — all without disrupting their existing workflow.",
+				"Three-part system: Bill of Materials optimizer with 4-phase algorithm, automated inventory ingestion from existing Google Drive Excel files, and a unified operations web application: all without disrupting their existing workflow.",
 			results: [
 				"30+ minute calculations replaced with instant results",
 				"Built-in profit margin targeting on every build order",
-				"Automated inventory tracking — no more manual Excel data entry",
-				"Zero workflow disruption — kept their existing Excel formats",
+				"Automated inventory tracking: no more manual Excel data entry",
+				"Zero workflow disruption: kept their existing Excel formats",
 			],
 			tech: "Python, Reflex, FastAPI, Azure Functions, PostgreSQL, Google Drive API",
 		},
@@ -68,7 +71,7 @@
 
 <section id="work" class="bg-white py-20 md:py-28">
 	<div class="mx-auto max-w-6xl px-6">
-		<div class="mb-12 max-w-2xl">
+		<div class="mb-12 max-w-2xl" use:inview>
 			<h2 class="text-3xl font-bold text-heading md:text-4xl">
 				Projects that delivered
 			</h2>
@@ -81,7 +84,8 @@
 		<div class="space-y-6">
 			{#each studies as study, i}
 				<div
-					class="rounded-xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md"
+					class="rounded-xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
+					use:inview={i * 120}
 				>
 					<button
 						class="w-full cursor-pointer p-6 text-left md:p-8"
@@ -114,7 +118,7 @@
 								<p class="mt-2 text-text">{study.summary}</p>
 							</div>
 							<span
-								class="mt-1 shrink-0 text-primary transition-transform duration-200 {expanded ===
+								class="mt-1 shrink-0 text-primary transition-transform duration-300 {expanded ===
 								i
 									? 'rotate-180'
 									: ''}"
@@ -139,6 +143,7 @@
 					{#if expanded === i}
 						<div
 							class="border-t border-gray-100 px-6 pb-6 md:px-8 md:pb-8"
+							transition:slide={{ duration: 350 }}
 						>
 							<div class="grid gap-6 pt-6 md:grid-cols-3">
 								<div>
