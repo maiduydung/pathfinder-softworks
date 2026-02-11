@@ -155,7 +155,7 @@
 					<h3
 						class="mt-3 text-sm font-bold text-heading transition-colors group-hover:text-primary"
 					>
-						{other.name}
+						{other.gridName || other.name}
 					</h3>
 					<p
 						class="mt-0.5 text-xs font-medium uppercase tracking-wider text-primary"
