@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{member.name} — {member.role} | Pathfinder Softworks</title>
+	<title>{member.name} - {member.role} | Pathfinder Softworks</title>
 	<meta name="description" content={member.intro} />
 </svelte:head>
 
@@ -78,10 +78,12 @@
 		</div>
 
 		<!-- Content Below -->
-		<div class="mx-auto mt-12 max-w-3xl">
-			<p class="text-lg leading-relaxed text-text">
-				{member.description}
-			</p>
+		<div class="mx-auto mt-12 max-w-3xl space-y-4">
+			{#each member.description as paragraph}
+				<p class="text-lg leading-relaxed text-text">
+					{paragraph}
+				</p>
+			{/each}
 
 			<div class="mt-8 flex flex-wrap items-center gap-4">
 				<a
@@ -135,14 +137,9 @@
 		<h2 class="mb-10 text-center text-xl font-bold text-heading">
 			Meet the rest of the team
 		</h2>
-		<div
-			class="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4"
-		>
+		<div class="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4">
 			{#each otherMembers as other}
-				<a
-					href="/team/{other.slug}"
-					class="group text-center"
-				>
+				<a href="/team/{other.slug}" class="group text-center">
 					<div
 						class="mx-auto h-24 w-24 overflow-hidden rounded-full border-2 border-transparent transition-all duration-200 group-hover:border-primary/30 group-hover:shadow-lg md:h-28 md:w-28"
 					>
