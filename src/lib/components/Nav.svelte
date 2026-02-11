@@ -3,10 +3,10 @@
 	let mobileOpen = $state(false);
 
 	const links = [
-		{ href: '#services', label: 'Services' },
-		{ href: '#work', label: 'Work' },
-		{ href: '#about', label: 'About' },
-		{ href: '#contact', label: 'Contact' }
+		{ href: '/#services', label: 'Services' },
+		{ href: '/#work', label: 'Work' },
+		{ href: '/team/mai-duy-dung', label: 'Team' },
+		{ href: '/#contact', label: 'Contact' }
 	];
 
 	function handleScroll() {
@@ -26,7 +26,7 @@
 		: 'bg-transparent'}"
 >
 	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-		<a href="#top" class="flex items-center gap-2.5 text-lg font-semibold text-heading">
+		<a href="/" class="flex items-center gap-2.5 text-lg font-semibold text-heading">
 			<svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 22l10-5 10 5L12 2z" />
 			</svg>

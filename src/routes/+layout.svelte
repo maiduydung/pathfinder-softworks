@@ -1,5 +1,7 @@
 <script>
 	import "../app.css";
+	import Nav from "$lib/components/Nav.svelte";
+	import Footer from "$lib/components/Footer.svelte";
 	let { children } = $props();
 </script>
 
@@ -21,4 +23,6 @@
 	/>
 </svelte:head>
 
+<Nav />
 {@render children()}
+<Footer />
