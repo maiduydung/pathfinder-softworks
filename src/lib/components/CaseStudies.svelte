@@ -14,60 +14,54 @@
 			link: "https://www.linkedin.com/company/proplytics/",
 			subtitle: "SaaS Platform",
 			metric: "Hours → Seconds",
-			metricDetail: "per investment analysis",
+			metricDetail: "per investment decision",
 			summary:
-				"A real estate investment platform that surfaces ROI, cap rate, cash flow, and financial breakdowns per property: metrics even Zillow doesn't offer. Investors go from hours of spreadsheet modeling to instant, confidence-scored decisions.",
+				"Hours of spreadsheet modeling replaced with instant, confidence-scored investment analysis.",
 			problem:
-				"Real estate investors waste hours pulling data from Zillow, Airbnb, county records, and running spreadsheet models to evaluate a single property. For portfolio investors analyzing dozens of properties across markets, this process doesn't scale.",
+				"Investors pulled data from a dozen sources and ran manual spreadsheet models for every property. Didn't scale.",
 			solution:
-				"Full-stack SaaS platform with automated data ingestion from multiple sources, real-time financial modeling (ROI, cap rate, cash flow, rent-to-price), dual rental strategy comparison, ML-powered similar property discovery, and GPU-accelerated map visualization.",
+				"A platform that gathers data automatically, runs financial models in real time, and scores every data point for reliability.",
 			results: [
-				"Investment analysis that took hours delivered in under 3 seconds",
-				"Financial metrics (ROI, cap rate, cash flow) no competitor surfaces",
-				"Confidence scoring on every data point: no unverified guesses",
-				"Property financial breakdowns: mortgage, PMI, taxes, insurance, year-by-year projections",
+				"Hours of analysis reduced to seconds",
+				"Financial insights no competitor offers",
+				"Confidence scoring on every data point",
 			],
-			tech: "Next.js, TypeScript, Python, FastAPI, Azure, DuckDB, Stripe",
 		},
 		{
-			title: "AI-Powered Deal Sourcing Tool",
+			title: "Investment Intelligence Platform",
 			link: null,
-			subtitle: "AI Product",
-			metric: "Zero",
-			metricDetail: "manual processing needed",
+			subtitle: "AI & Data",
+			metric: "40+",
+			metricDetail: "data sources, zero manual work",
 			summary:
-				"An automated pipeline for venture capital that scrapes company data across 40+ platforms, processes bilingual content (Japanese & English), and delivers personalized investment scores: completely hands-off.",
+				"Manual deal research across 40+ platforms and two languages, fully automated from start to finish.",
 			problem:
-				"VC investors evaluating early-stage companies can't scale manual research. Company information is scattered across social platforms and press releases in multiple languages. By the time they finish researching, the deal window has closed.",
+				"VC investors couldn't research fast enough. Data scattered across dozens of platforms in multiple languages. Best deals gone before research finished.",
 			solution:
-				"Five interconnected systems: distributed web scraping, bilingual news pipeline (Japanese/English), AI-powered enrichment with NLP, revenue stream classifier, and investor-specific scoring engine with personalized ratings.",
+				"An automated system that monitors 40+ sources, processes Japanese and English content, and delivers scored opportunities to each investor.",
 			results: [
-				"Fully automated pipeline: raw data to scored opportunities",
-				"Bilingual processing across Japanese and English sources",
-				"Personalized investment ratings matching each investor's criteria",
-				"Deals surfaced before competitors even finish their research",
+				"Raw data to scored opportunities, fully automated",
+				"40+ sources consolidated into one view",
+				"Deals surfaced before competitors see them",
 			],
-			tech: "Ruby on Rails, Python, FastAPI, Playwright, Hugging Face, PostgreSQL, Docker",
 		},
 		{
 			title: "Nhu Tin",
 			link: "https://nhutin.com/",
 			subtitle: "Digital Transformation",
 			metric: "30 min → Instant",
-			metricDetail: "per build calculation",
+			metricDetail: "per customer quote",
 			summary:
-				"Nhu Tin is a Vietnamese corporation specializing in industrial biomass fuel and automatic unloading systems for trucks and container trailers. We replaced their 30-minute manual Bill of Materials calculations with instant, constraint-aware optimization: protecting margins on every order without changing their existing workflow.",
+				"30-minute manual Excel calculations replaced with instant, margin-protected quotes.",
 			problem:
-				"Nhu Tin's manufacturing operations run on razor-thin margins. For every order, the team manually calculated optimal materials in Excel spreadsheets (Vietnamese-language), taking 30+ minutes per quote. This meant slow quoting, inconsistent margins, zero visibility into profitability, and inventory tracked by hand.",
+				"Every order required 30+ minutes of manual material calculations in Excel. Slow quoting, inconsistent margins, no visibility into profitability.",
 			solution:
-				"Three-part system: Bill of Materials optimizer with 4-phase algorithm, automated inventory ingestion from existing Google Drive Excel files, and a unified operations web application: all without disrupting their existing workflow.",
+				"An operations platform that optimizes materials instantly, tracks inventory automatically, and protects margins on every order.",
 			results: [
-				"30+ minute calculations replaced with instant results",
-				"Built-in profit margin targeting on every build order",
-				"Automated inventory tracking: no more manual Excel data entry",
-				"Zero workflow disruption: kept their existing Excel formats",
+				"Instant quotes instead of 30-minute calculations",
+				"Profit margins protected automatically",
+				"Zero workflow disruption for the team",
 			],
-			tech: "Python, Reflex, FastAPI, Azure Functions, PostgreSQL, Google Drive API",
 		},
 	];
 </script>
@@ -165,7 +159,7 @@
 									<h4
 										class="text-sm font-semibold uppercase tracking-wide text-primary"
 									>
-										What We Built
+										Our Solution
 									</h4>
 									<p class="mt-2 text-sm text-text">
 										{study.solution}
@@ -200,12 +194,6 @@
 										{/each}
 									</ul>
 								</div>
-							</div>
-							<div class="mt-4 border-t border-gray-50 pt-4">
-								<p class="text-xs text-text/60">
-									<span class="font-medium">Tech:</span>
-									{study.tech}
-								</p>
 							</div>
 						</div>
 					{/if}

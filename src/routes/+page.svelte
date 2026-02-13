@@ -5,7 +5,6 @@
 	import CaseStudies from '$lib/components/CaseStudies.svelte';
 	import About from '$lib/components/About.svelte';
 	import HowWeWork from '$lib/components/HowWeWork.svelte';
-	import Tools from '$lib/components/Tools.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 </script>
 
@@ -16,6 +15,5 @@
 	<CaseStudies />
 	<About />
 	<HowWeWork />
-	<Tools />
 	<Contact />
 </main>
