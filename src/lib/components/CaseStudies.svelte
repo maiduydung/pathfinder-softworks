@@ -70,7 +70,7 @@
 	<div class="mx-auto max-w-6xl px-6">
 		<div class="mb-12 max-w-2xl" use:inview>
 			<h2 class="text-3xl font-bold text-heading md:text-4xl">
-				Projects that delivered
+				Projects we delivered
 			</h2>
 			<p class="mt-4 text-lg text-text">
 				Every project here solved a real business problem and produced a
@@ -92,9 +92,19 @@
 						<div class="flex items-start justify-between gap-4">
 							<div class="flex-1">
 								<div class="flex flex-wrap items-center gap-3">
-									<h3 class="text-xl font-semibold text-heading">
+									<h3
+										class="text-xl font-semibold text-heading"
+									>
 										{#if study.link}
-											<a href={study.link} target="_blank" rel="noopener noreferrer" class="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary/60" onclick={(e) => e.stopPropagation()}>{study.title}</a>
+											<a
+												href={study.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary/60"
+												onclick={(e) =>
+													e.stopPropagation()}
+												>{study.title}</a
+											>
 										{:else}
 											{study.title}
 										{/if}

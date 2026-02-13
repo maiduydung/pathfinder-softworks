@@ -1,3 +1,9 @@
+export interface TeamLocation {
+	city: string;
+	country: string;
+	timezone: string;
+}
+
 export interface TeamMember {
 	slug: string;
 	name: string;
@@ -9,6 +15,7 @@ export interface TeamMember {
 	intro: string;
 	description: string[];
 	image: string;
+	location: TeamLocation;
 }
 
 export const team: TeamMember[] = [
@@ -27,6 +34,7 @@ export const team: TeamMember[] = [
 			"Pathfinder is my way of bringing that execution discipline to SMEs that need serious systems without enterprise bureaucracy.",
 		],
 		image: "/dung_avatar.jpg",
+		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
 	},
 	{
 		slug: "duy-tran",
@@ -37,13 +45,14 @@ export const team: TeamMember[] = [
 		tagline:
 			"Ex-Google & Microsoft. Venture-backed founder. Brings Silicon Valley discipline to our U.S. strategy.",
 		intro:
-			"Former Microsoft and Google cloud leader turned venture-backed founder. Selected into Sam Altman’s Residency and backed through Draper House Americas. Built enterprise-scale data systems, led global engineering teams, and closed multi-million dollar cloud initiatives before stepping into startups.",
+			"Former Microsoft and Google cloud leader turned venture-backed founder. Selected into Sam Altman's Residency and backed through Draper House Americas. Built enterprise-scale data systems, led global engineering teams, and closed multi-million dollar cloud initiatives before stepping into startups.",
 		description: [
 			"Duy has operated at both ends of the spectrum: Enterprise and venture-backed startup. At Microsoft and Google, he led large cloud engagements, managed distributed engineering teams across the U.S. and India, and worked directly with C-level executives on mission-critical infrastructure.",
 			"He later founded PropLytics, an AI platform for U.S. real estate investors, and was selected into Sam Altman's Residency, joining a global cohort of high-growth founders.",
 			"Today, he advises Pathfinder on U.S. strategy, enterprise positioning, and how to win credibility in markets where standards are unforgiving and execution matters.",
 		],
 		image: "/duy_avatar.jpg",
+		location: { city: "San Francisco", country: "United States", timezone: "GMT-8" },
 	},
 	{
 		slug: "felix",
@@ -52,7 +61,7 @@ export const team: TeamMember[] = [
 		role: "Product Design",
 		linkedin: "https://www.linkedin.com/in/felicjanp-c/",
 		tagline:
-			"Founding UI/UX lead at PropLytics, built the product’s design system from zero. Every interface we ship goes through his hands.",
+			"Founding UI/UX lead at PropLytics, built the product's design system from zero. Every interface we ship goes through his hands.",
 		intro:
 			"Product designer with an industrial design background and international training in Dublin and San Francisco. Focused on building software that feels clear, trustworthy, and easy to use, even when the product is complex.",
 		description: [
@@ -61,6 +70,7 @@ export const team: TeamMember[] = [
 			"At Pathfinder, he owns the final user experience before any client sees it.",
 		],
 		image: "/felix_avatar.jpg",
+		location: { city: "Warsaw", country: "Poland", timezone: "GMT+1" },
 	},
 	{
 		slug: "quang-than",
@@ -76,6 +86,7 @@ export const team: TeamMember[] = [
 			"He has delivered production software for startups and remote teams across multiple countries. Calm under pressure and deeply practical, Quang focuses on building systems that are maintainable, performant, and dependable long after launch.",
 		],
 		image: "/quang_avatar.jpg",
+		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
 	},
 	{
 		slug: "thao-do",
@@ -91,5 +102,6 @@ export const team: TeamMember[] = [
 			"Her recent LinkedIn campaign work generated 8,000+ impressions within days, contributing directly to brand exposure among U.S. founders and investors. She focuses on one thing: making sure the right people see the right message at the right time.",
 		],
 		image: "/thao_avatar.jpg",
+		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
 	},
 ];

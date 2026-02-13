@@ -2,27 +2,18 @@
 	import "../app.css";
 	import Nav from "$lib/components/Nav.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+	import { page } from '$app/stores';
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link
-		rel="preconnect"
-		href="https://fonts.gstatic.com"
-		crossorigin="anonymous"
-	/>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-		rel="stylesheet"
-	/>
-	<title>Pathfinder Softworks, We Build Software That Delivers Results</title>
-	<meta
-		name="description"
-		content="A full-service software agency that builds SaaS platforms, custom tools, and AI-powered products. We don't just ship code, we ship outcomes that save time, cut costs, and drive ROI."
-	/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </svelte:head>
 
 <Nav />
-{@render children()}
+{#key $page.url.pathname}
+	{@render children()}
+{/key}
 <Footer />

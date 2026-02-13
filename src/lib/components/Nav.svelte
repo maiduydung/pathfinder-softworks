@@ -1,44 +1,42 @@
 <script lang="ts">
-	let scrolled = $state(false);
+	import { page } from '$app/stores';
+
 	let mobileOpen = $state(false);
 
 	const links = [
-		{ href: '/#services', label: 'Services' },
-		{ href: '/#work', label: 'Work' },
-		{ href: '/team/mai-duy-dung', label: 'Team' },
-		{ href: '/#contact', label: 'Contact' }
+		{ href: '/services', label: 'Services' },
+		{ href: '/work', label: 'Work' },
+		{ href: '/about', label: 'About' },
+		{ href: '/contact', label: 'Contact' },
 	];
-
-	function handleScroll() {
-		scrolled = window.scrollY > 20;
-	}
 
 	function closeMobile() {
 		mobileOpen = false;
 	}
+
+	function isActive(href: string, pathname: string): boolean {
+		if (href === '/') return pathname === '/';
+		return pathname.startsWith(href);
+	}
 </script>
 
-<svelte:window onscroll={handleScroll} />
-
-<nav
-	class="fixed top-0 right-0 left-0 z-50 transition-all duration-300 {scrolled
-		? 'bg-white/95 shadow-sm backdrop-blur-sm'
-		: 'bg-transparent'}"
->
-	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-		<a href="/" class="flex items-center gap-2.5 text-lg font-semibold text-heading">
+<nav class="sticky top-0 z-50 border-b border-border bg-white">
+	<div class="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3">
+		<a href="/" class="flex items-center gap-2 text-lg font-semibold text-foreground">
 			<svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 22l10-5 10 5L12 2z" />
 			</svg>
-			<span>Pathfinder Softworks</span>
+			Pathfinder Softworks
 		</a>
 
-		<!-- Desktop links -->
-		<div class="hidden items-center gap-8 md:flex">
+		<!-- Desktop -->
+		<div class="hidden items-center gap-1 md:flex">
 			{#each links as link}
 				<a
 					href={link.href}
-					class="text-sm text-text transition-colors hover:text-primary"
+					class="rounded-full px-4 py-1.5 text-sm transition-colors {isActive(link.href, $page.url.pathname)
+						? 'text-primary font-medium'
+						: 'text-light hover:text-foreground'}"
 				>
 					{link.label}
 				</a>
@@ -47,15 +45,15 @@
 				href="https://calendly.com/maiduydungvn/meeting-with-mai"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/25"
+				class="ml-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-colors hover:bg-primary-hover"
 			>
-				Book a free call
+				Book a call
 			</a>
 		</div>
 
 		<!-- Mobile hamburger -->
 		<button
-			class="text-heading md:hidden"
+			class="text-foreground md:hidden"
 			onclick={() => (mobileOpen = !mobileOpen)}
 			aria-label="Toggle menu"
 		>
@@ -69,13 +67,14 @@
 		</button>
 	</div>
 
-	<!-- Mobile menu -->
 	{#if mobileOpen}
-		<div class="border-t border-gray-100 bg-white px-6 pb-4 md:hidden">
+		<div class="border-t border-border bg-white px-6 pb-4 md:hidden">
 			{#each links as link}
 				<a
 					href={link.href}
-					class="block py-3 text-sm text-text transition-colors hover:text-primary"
+					class="block py-2.5 text-sm {isActive(link.href, $page.url.pathname)
+						? 'text-primary font-medium'
+						: 'text-light'}"
 					onclick={closeMobile}
 				>
 					{link.label}
@@ -85,10 +84,10 @@
 				href="https://calendly.com/maiduydungvn/meeting-with-mai"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="mt-2 inline-block rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
+				class="mt-2 inline-block rounded-full bg-primary px-5 py-2 text-sm font-bold text-white"
 				onclick={closeMobile}
 			>
-				Book a free call
+				Book a call
 			</a>
 		</div>
 	{/if}
