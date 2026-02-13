@@ -15,7 +15,7 @@
 	<div class="mx-auto max-w-[1400px] px-6">
 		<SectionHeader
 			title="What we build"
-			subtitle="Every engagement starts with the outcome you need — then we work backwards to build it."
+			subtitle="Every engagement starts with the outcome you need. We work backwards to build it."
 		/>
 
 		<div class="grid gap-4 md:grid-cols-2">

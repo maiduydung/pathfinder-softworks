@@ -3,6 +3,7 @@
 	import { services, processSteps, industries, techStack } from "$lib/data/services";
 	import SectionHeader from "$lib/components/SectionHeader.svelte";
 	import CTABanner from "$lib/components/CTABanner.svelte";
+	import { techUrls } from "$lib/data/tech-urls";
 
 	const iconPaths: Record<string, string> = {
 		globe: 'M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418',
@@ -23,30 +24,30 @@
 		<p class="text-sm font-bold uppercase tracking-widest text-primary">Services</p>
 		<h1 class="mt-3 font-bold text-5xl leading-snug tracking-tight text-foreground lg:text-6xl">What we build</h1>
 		<p class="mt-3 text-lg leading-relaxed text-light">
-			Every engagement starts with the outcome you need — then we work backwards to build it.
+			Every engagement starts with the outcome you need. We work backwards to build it.
 		</p>
 	</div>
 </section>
 
-<!-- Services — alternating layout, xyflow-style -->
+<!-- Services -->
 <section class="my-12 lg:my-16">
-	<div class="mx-auto max-w-[1400px] px-6 space-y-12">
-		{#each services as service, i}
-			<div class="grid gap-6 md:grid-cols-2 md:items-start" use:inview>
-				<div class="{i % 2 === 1 ? 'md:order-2' : ''}">
-					<svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" d={iconPaths[service.icon]} />
-					</svg>
-					<h2 class="mt-3 font-bold text-2xl text-foreground lg:text-3xl">{service.title}</h2>
+	<div class="mx-auto max-w-[1400px] px-6">
+		<div class="grid gap-6 md:grid-cols-2">
+			{#each services as service, i}
+				<div class="flex flex-col rounded-3xl border border-border p-6 lg:p-8" use:inview={i * 80}>
+					<div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
+						<svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d={iconPaths[service.icon]} />
+						</svg>
+					</div>
+					<h2 class="mt-4 font-bold text-xl text-foreground lg:text-2xl">{service.title}</h2>
 					<p class="mt-1 text-sm font-medium text-primary">{service.outcome}</p>
-					<p class="mt-3 leading-relaxed text-light">{service.description}</p>
-				</div>
-				<div class="rounded-3xl border border-border p-6 {i % 2 === 1 ? 'md:order-1' : ''}">
-					<p class="text-xs font-bold uppercase tracking-widest text-primary">What's included</p>
-					<ul class="mt-3 space-y-2">
+					<p class="mt-3 text-sm leading-relaxed text-light">{service.description}</p>
+
+					<ul class="mt-auto flex flex-col gap-2 border-t border-border pt-5 mt-5">
 						{#each service.items as item}
-							<li class="flex items-start gap-2 text-sm text-light">
-								<svg class="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+							<li class="flex items-center gap-2.5 text-sm text-foreground">
+								<svg class="h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 								</svg>
 								{item}
@@ -54,8 +55,8 @@
 						{/each}
 					</ul>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
 </section>
 
@@ -93,14 +94,18 @@
 <!-- Tech Stack -->
 <section class="my-16 lg:my-24">
 	<div class="mx-auto max-w-[1400px] px-6">
-		<SectionHeader title="Our stack" subtitle="The tools matter less than the result — but here's what we work with." />
+		<SectionHeader title="Our stack" subtitle="The tools matter less than the result, but here's what we work with." />
 		<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 			{#each techStack as category, i}
 				<div class="rounded-3xl border border-border p-5" use:inview={i * 60}>
 					<h3 class="text-xs font-bold uppercase tracking-widest text-primary">{category.title}</h3>
 					<div class="mt-3 flex flex-wrap gap-1.5">
 						{#each category.tools as tool}
-							<span class="rounded-full bg-muted px-2.5 py-0.5 text-sm text-light">{tool}</span>
+							{#if techUrls[tool]}
+								<a href={techUrls[tool]} target="_blank" rel="noopener noreferrer" class="rounded-full bg-muted px-2.5 py-0.5 text-sm text-light transition-colors hover:bg-primary/10 hover:text-primary">{tool}</a>
+							{:else}
+								<span class="rounded-full bg-muted px-2.5 py-0.5 text-sm text-light">{tool}</span>
+							{/if}
 						{/each}
 					</div>
 				</div>

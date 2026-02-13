@@ -13,7 +13,7 @@ export const services: Service[] = [
 		title: 'SaaS Products',
 		outcome: 'Launch a product your customers pay for',
 		description:
-			'We take your idea from concept to a live, revenue-generating SaaS platform. Accounts, billing, dashboards, and the infrastructure to scale — all built in from day one.',
+			'We take your idea from concept to a live, revenue-generating SaaS platform. Accounts, billing, dashboards, and the infrastructure to scale, all built in from day one.',
 		items: [
 			'From idea to paying customers, end to end',
 			'Accounts, billing, and dashboards built in',
@@ -39,7 +39,7 @@ export const services: Service[] = [
 		title: 'AI & Data Intelligence',
 		outcome: 'Turn scattered data into a competitive advantage',
 		description:
-			'We build production-grade data pipelines and AI systems that collect, process, and analyze information from dozens of sources — delivering actionable insights your competitors miss.',
+			'We build production-grade data pipelines and AI systems that collect, process, and analyze information from dozens of sources. The result: actionable insights your competitors miss.',
 		items: [
 			'Collect, organize, and analyze data automatically',
 			'Dozens of sources unified into one view',
@@ -52,7 +52,7 @@ export const services: Service[] = [
 		title: 'Custom Business Software',
 		outcome: 'Software that fits how you actually work',
 		description:
-			'Off-the-shelf tools never quite fit. We build operations platforms, internal tools, and custom applications designed around your team\'s actual workflows — with zero disruption.',
+			'Off-the-shelf tools never quite fit. We build operations platforms, internal tools, and custom applications designed around how your team actually works. No disruption, no workarounds.',
 		items: [
 			'Operations, inventory, and internal tools',
 			'Works with your existing processes',
@@ -67,7 +67,7 @@ export const processSteps = [
 		number: '01',
 		title: 'Discovery',
 		description:
-			'We learn your business, your users, and the outcome you need. No generic questionnaires — we dig into what actually matters to your bottom line.',
+			'We learn your business, your users, and the outcome you need. No generic questionnaires. We dig into what actually matters to your bottom line.',
 	},
 	{
 		number: '02',

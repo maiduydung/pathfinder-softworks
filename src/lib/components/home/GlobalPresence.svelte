@@ -7,7 +7,7 @@
 	<div class="mx-auto max-w-[1400px] px-6">
 		<SectionHeader
 			title="Global team, local execution"
-			subtitle="Our team spans three continents — so there's always someone awake, building, and shipping."
+			subtitle="Our team spans three continents. There's always someone awake, building, and shipping."
 		/>
 		<WorldMap />
 	</div>

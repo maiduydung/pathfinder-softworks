@@ -199,7 +199,7 @@
 														d="M4.5 12.75l6 6 9-13.5"
 													/>
 												</svg>
-												<span>{result}</span>
+												<span>{result.text}</span>
 											</li>
 										{/each}
 									</ul>
