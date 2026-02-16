@@ -267,6 +267,6 @@ If parts of this page felt uncomfortably familiar, we should probably talk.
 
 No pressure. No sales script. Just a short call to see if there's something worth fixing.
 
-- **Email**: maiduydungvn@gmail.com
+- **Email**: hello@pathfindersoftworks.com
 - **LinkedIn**: (https://www.linkedin.com/in/maiduydung/)
 - **Calendly**: (https://calendly.com/maiduydungvn/meeting-with-mai)

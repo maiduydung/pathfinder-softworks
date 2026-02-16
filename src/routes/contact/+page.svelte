@@ -126,13 +126,13 @@
 				<p class="mt-1 text-sm text-light">Prefer a direct conversation? Pick what works best.</p>
 
 				<div class="mt-6 space-y-3">
-					<a href="mailto:maiduydungvn@gmail.com" class="flex items-center gap-3 rounded-3xl border border-border p-4 transition-colors hover:bg-gray-50/50">
+					<a href="mailto:hello@pathfindersoftworks.com" class="flex items-center gap-3 rounded-3xl border border-border p-4 transition-colors hover:bg-gray-50/50">
 						<svg class="h-5 w-5 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
 						</svg>
 						<div>
 							<p class="text-sm font-medium text-foreground">Email</p>
-							<p class="text-xs text-light">maiduydungvn@gmail.com</p>
+							<p class="text-xs text-light">hello@pathfindersoftworks.com</p>
 						</div>
 					</a>
 					<a href="https://www.linkedin.com/company/pathfinder-softworks" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-3xl border border-border p-4 transition-colors hover:bg-gray-50/50">
