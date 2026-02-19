@@ -46,8 +46,8 @@
 			],
 		},
 		{
-			title: "Nhu Tin",
-			link: "https://nhutin.com/",
+			title: "Vietnamese Logistics Co.",
+			link: null,
 			subtitle: "Digital Transformation",
 			metric: "30 min → Instant",
 			metricDetail: "per customer quote",

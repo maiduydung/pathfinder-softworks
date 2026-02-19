@@ -83,10 +83,10 @@ export const caseStudies: CaseStudy[] = [
 		tech: ['Ruby on Rails', 'Python', 'LangChain', 'PostgreSQL', 'PGVector', 'Playwright', 'Scrapy', 'PyTorch'],
 	},
 	{
-		slug: 'nhu-tin',
-		title: 'Nhu Tin',
+		slug: 'vn-logistics',
+		title: 'Vietnamese Logistics Co.',
 		subtitle: 'Digital Transformation',
-		link: 'https://nhutin.com/',
+		link: null,
 		metric: '3%',
 		metricDetail: 'cost optimization per shipment',
 		stats: [
@@ -107,13 +107,13 @@ export const caseStudies: CaseStudy[] = [
 			{ text: '30 min manual quotes to instant generation', icon: 'timer' },
 		],
 		tech: ['Next.js', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'Docker'],
-		image: '/past_works/nhutin/nhutin_bom.png',
+		image: '/past_works/nhutin/bom.png',
 		images: [
-			{ src: '/past_works/nhutin/nhutin_landing_page.png', alt: 'Nhu Tin BOM Optimizer: document viewing, invoice parsing, weight calculation' },
-			{ src: '/past_works/nhutin/nhutin_shipment_input_fake.png', alt: 'Shipment input for container length, item type, dimensions, and profit margin' },
+			{ src: '/past_works/nhutin/landing_page.png', alt: 'BOM Optimizer: document viewing, invoice parsing, weight calculation' },
+			{ src: '/past_works/nhutin/shipment_input.png', alt: 'Shipment input for container length, item type, dimensions, and profit margin' },
 			{ src: '/past_works/nhutin/nhutin_bom.png', alt: 'BOM results with weight constraints, profit calculation, and exportable line items' },
-			{ src: '/past_works/nhutin/nhutin_excel_input.png', alt: 'Inventory database sync via Excel upload' },
-			{ src: '/past_works/nhutin/nhutin_invoice.png', alt: 'Intelligent XML invoice parsing with VAT calculation' },
+			{ src: '/past_works/nhutin/excel_input.png', alt: 'Inventory database sync via Excel upload' },
+			{ src: '/past_works/nhutin/invoice.png', alt: 'Intelligent XML invoice parsing with VAT calculation' },
 		],
 	},
 ];
