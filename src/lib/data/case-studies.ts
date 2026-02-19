@@ -109,10 +109,10 @@ export const caseStudies: CaseStudy[] = [
 		tech: ['Next.js', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'Docker'],
 		image: '/past_works/nhutin/bom.png',
 		images: [
-			{ src: '/past_works/nhutin/landing_page.png', alt: 'BOM Optimizer: document viewing, invoice parsing, weight calculation' },
 			{ src: '/past_works/nhutin/bom.png', alt: 'BOM results with weight constraints, profit calculation, and exportable line items' },
+			{ src: '/past_works/nhutin/landing_page.png', alt: 'BOM Optimizer: document viewing, invoice parsing, weight calculation' },
 			{ src: '/past_works/nhutin/excel_input.png', alt: 'Inventory database sync via Excel upload' },
-			{ src: '/past_works/nhutin/invoice.png', alt: 'Intelligent XML invoice parsing with VAT calculation' },
+			{ src: '/past_works/nhutin/invoice.png', alt: 'Intelligent XML invoice parsing with VAT calculation' }
 		],
 	},
 ];
