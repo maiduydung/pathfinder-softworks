@@ -110,7 +110,6 @@ export const caseStudies: CaseStudy[] = [
 		image: '/past_works/nhutin/bom.png',
 		images: [
 			{ src: '/past_works/nhutin/landing_page.png', alt: 'BOM Optimizer: document viewing, invoice parsing, weight calculation' },
-			{ src: '/past_works/nhutin/shipment_input.png', alt: 'Shipment input for container length, item type, dimensions, and profit margin' },
 			{ src: '/past_works/nhutin/bom.png', alt: 'BOM results with weight constraints, profit calculation, and exportable line items' },
 			{ src: '/past_works/nhutin/excel_input.png', alt: 'Inventory database sync via Excel upload' },
 			{ src: '/past_works/nhutin/invoice.png', alt: 'Intelligent XML invoice parsing with VAT calculation' },
