@@ -70,7 +70,7 @@ export const team: TeamMember[] = [
 			"At Pathfinder, he owns the final user experience before any client sees it.",
 		],
 		image: "/felix_avatar.jpg",
-		location: { city: "Warsaw", country: "Poland", timezone: "GMT+1" },
+		location: { city: "Warsaw", country: "Europe", timezone: "GMT+1" },
 	},
 	{
 		slug: "quang-than",
