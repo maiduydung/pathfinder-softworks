@@ -41,7 +41,7 @@
 				<div>
 					<p class="text-xs font-bold uppercase tracking-widest text-primary">Contact</p>
 					<ul class="mt-3 space-y-2">
-						<li><a href="mailto:hello@pathfindersoftworks.com" class="text-sm text-light hover:text-primary">hello@pathfindersoftworks.com</a></li>
+						<li><a href="mailto:hello@pathfindersoftworks.com" class="text-sm text-light hover:text-primary break-all">hello@pathfindersoftworks.com</a></li>
 						<li><span class="text-sm text-light">US &middot; Europe &middot; Vietnam</span></li>
 					</ul>
 				</div>
