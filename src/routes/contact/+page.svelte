@@ -13,11 +13,8 @@
 		e.preventDefault();
 		status = "sending";
 		try {
-			const formData = new FormData();
-			formData.append("access_key", WEB3FORMS_KEY);
-			formData.append("name", name);
-			formData.append("email", email);
-			formData.append("message", message);
+			const form = e.currentTarget as HTMLFormElement;
+			const formData = new FormData(form);
 			formData.append("subject", `New message from ${name} at Pathfinder Softworks`);
 
 			const response = await fetch("https://api.web3forms.com/submit", {
@@ -64,40 +61,44 @@
 				<h2 class="font-bold text-xl text-foreground">Send us a message</h2>
 				<p class="mt-1 text-sm text-light">We'll get back to you within 24 hours.</p>
 
-				<form onsubmit={handleSubmit} class="mt-6 space-y-4">
-					<div>
-						<label for="name" class="block text-sm font-medium text-foreground">Name</label>
-						<input
-							id="name"
-							type="text"
-							bind:value={name}
-							required
-							class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-							placeholder="Your name"
-						/>
-					</div>
-					<div>
-						<label for="email" class="block text-sm font-medium text-foreground">Email</label>
-						<input
-							id="email"
-							type="email"
-							bind:value={email}
-							required
-							class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-							placeholder="you@company.com"
-						/>
-					</div>
-					<div>
-						<label for="message" class="block text-sm font-medium text-foreground">What outcome are you looking for?</label>
-						<textarea
-							id="message"
-							bind:value={message}
-							required
-							rows="4"
-							class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-							placeholder="e.g. I need a platform that..., We're spending too much time on..."
-						></textarea>
-					</div>
+			<form onsubmit={handleSubmit} class="mt-6 space-y-4">
+				<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+				<div>
+					<label for="name" class="block text-sm font-medium text-foreground">Name</label>
+					<input
+						id="name"
+						name="name"
+						type="text"
+						bind:value={name}
+						required
+						class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
+						placeholder="Your name"
+					/>
+				</div>
+				<div>
+					<label for="email" class="block text-sm font-medium text-foreground">Email</label>
+					<input
+						id="email"
+						name="email"
+						type="email"
+						bind:value={email}
+						required
+						class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
+						placeholder="you@company.com"
+					/>
+				</div>
+				<div>
+					<label for="message" class="block text-sm font-medium text-foreground">What outcome are you looking for?</label>
+					<textarea
+						id="message"
+						name="message"
+						bind:value={message}
+						required
+						rows="4"
+						class="mt-1 w-full rounded-xl border border-border px-4 py-2.5 text-foreground placeholder-light/40 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
+						placeholder="e.g. I need a platform that..., We're spending too much time on..."
+					></textarea>
+				</div>
 					<button
 						type="submit"
 						disabled={status === "sending"}
