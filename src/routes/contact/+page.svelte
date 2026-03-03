@@ -13,16 +13,16 @@
 		e.preventDefault();
 		status = "sending";
 		try {
+			const formData = new FormData();
+			formData.append("access_key", WEB3FORMS_KEY);
+			formData.append("name", name);
+			formData.append("email", email);
+			formData.append("message", message);
+			formData.append("subject", `New message from ${name} at Pathfinder Softworks`);
+
 			const response = await fetch("https://api.web3forms.com/submit", {
 				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					access_key: WEB3FORMS_KEY,
-					name,
-					email,
-					message,
-					subject: `New message from ${name} at Pathfinder Softworks`,
-				}),
+				body: formData,
 			});
 			const data = await response.json();
 			if (data.success) {
