@@ -22,11 +22,8 @@
 
 <nav class="sticky top-0 z-50 border-b border-border bg-white">
 	<div class="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3">
-		<a href="/" class="flex items-center gap-2 text-lg font-semibold text-foreground">
-			<svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 22l10-5 10 5L12 2z" />
-			</svg>
-			Pathfinder Softworks
+		<a href="/" class="flex items-center gap-2">
+			<img src="/logo/pathfinder_softworks.png" alt="Pathfinder Softworks" class="h-14" />
 		</a>
 
 		<!-- Desktop -->

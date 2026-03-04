@@ -3,11 +3,8 @@
 		<div class="flex flex-col gap-10 lg:flex-row lg:gap-20">
 			<!-- Left: Brand -->
 			<div class="max-w-[280px]">
-				<a href="/" class="flex items-center gap-2 text-lg font-semibold text-foreground">
-					<svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 22l10-5 10 5L12 2z" />
-					</svg>
-					Pathfinder Softworks
+				<a href="/" class="flex items-center gap-2">
+					<img src="/logo/pathfinder_softworks.png" alt="Pathfinder Softworks" class="h-12" />
 				</a>
 				<p class="mt-3 text-sm leading-relaxed text-light">
 					Full-service software agency. SaaS, AI, and custom tools built to deliver real business outcomes.
