@@ -13,13 +13,16 @@
 		e.preventDefault();
 		status = "sending";
 		try {
-			const form = e.currentTarget as HTMLFormElement;
-			const formData = new FormData(form);
-			formData.append("subject", `New message from ${name} at Pathfinder Softworks`);
-
 			const response = await fetch("https://api.web3forms.com/submit", {
 				method: "POST",
-				body: formData,
+				headers: { "Content-Type": "application/json", Accept: "application/json" },
+				body: JSON.stringify({
+					access_key: WEB3FORMS_KEY,
+					name,
+					email,
+					message,
+					subject: `New message from ${name} at Pathfinder Softworks`,
+				}),
 			});
 			const data = await response.json();
 			if (data.success) {
@@ -62,7 +65,6 @@
 				<p class="mt-1 text-sm text-light">We'll get back to you within 24 hours.</p>
 
 			<form onsubmit={handleSubmit} class="mt-6 space-y-4">
-				<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
 				<div>
 					<label for="name" class="block text-sm font-medium text-foreground">Name</label>
 					<input
