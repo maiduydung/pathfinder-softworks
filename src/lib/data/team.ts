@@ -21,7 +21,7 @@ export interface TeamMember {
 export const team: TeamMember[] = [
 	{
 		slug: "mai-duy-dung",
-		name: "Mai Duy Dung",
+		name: "Dung Mai",
 		role: "Founder - Data & AI",
 		linkedin: "https://www.linkedin.com/in/maiduydung/",
 		tagline:
