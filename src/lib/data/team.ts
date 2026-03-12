@@ -109,7 +109,7 @@ export const team: TeamMember[] = [
 		name: "Tommy (Khuong) Nguyen",
 		gridName: "Tommy Nguyen",
 		role: "Deal Partner",
-		linkedin: "https://www.linkedin.com/in/khuong-nguyen-cong-thanh/",
+		linkedin: "https://www.linkedin.com/in/cong-thanh/",
 		tagline:
 			"Senior Investment Associate at Capital JDI. Ex-founder. Plugged into every corner of the Southeast Asia startup ecosystem.",
 		intro:
