@@ -64,7 +64,7 @@
 <section class="my-12 lg:my-16">
 	<div class="mx-auto max-w-[1400px] px-6">
 		<div
-			class="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-5"
+			class="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-6"
 		>
 			{#each team as member, i}
 				<a

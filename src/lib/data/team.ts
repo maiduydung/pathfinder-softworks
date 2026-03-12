@@ -104,4 +104,22 @@ export const team: TeamMember[] = [
 		image: "/thao_avatar.jpg",
 		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
 	},
+	{
+		slug: "tommy-nguyen",
+		name: "Tommy (Khuong) Nguyen",
+		gridName: "Tommy Nguyen",
+		role: "Deal Partner",
+		linkedin: "https://www.linkedin.com/in/khuong-nguyen-cong-thanh/",
+		tagline:
+			"Senior Investment Associate at Capital JDI. Ex-founder. Plugged into every corner of the Southeast Asia startup ecosystem.",
+		intro:
+			"Tommy has been on both sides of the table. He founded and operated a startup, learned to fundraise from the ground up, then crossed to the investment side at Capital JDI. At Pathfinder he brings those networks to surface the right clients.",
+		description: [
+			"Tommy co-founded GOVO Vietnam, a platform connecting retail investors with startups, where he ran operations, fundraising, and external relationships and helped three startups close their rounds.",
+			"At Capital JDI, he sources deals across Southeast Asia, performs due diligence, and supports portfolio companies post-investment. He has contributed to seed investments in Gignite AI, Alpha Story, and Buildbob AI, and regularly judges startup competitions including Venture Star, Tech Planter, and Future Maker.",
+			"Outside VC, he serves as COO at Roscommon Systems, an AI accessibility company building screen readers for vision-impaired users. At Pathfinder, he is the connector: he knows who needs what, and makes the introduction happen.",
+		],
+		image: "/tommy_avatar.jpeg",
+		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
+	},
 ];
