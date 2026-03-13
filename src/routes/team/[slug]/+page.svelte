@@ -46,6 +46,7 @@
 				src={member.image}
 				alt={member.name}
 				class="h-40 w-40 rounded-2xl border-4 border-white object-cover shadow-md lg:h-56 lg:w-56"
+				style={member.imagePosition ? `object-position: ${member.imagePosition}` : undefined}
 			/>
 			<div class="mt-4 text-center">
 				<p
@@ -128,6 +129,7 @@
 							src={other.image}
 							alt={other.name}
 							class="h-full w-full object-cover"
+							style={other.imagePosition ? `object-position: ${other.imagePosition}` : undefined}
 						/>
 					</div>
 					<h3

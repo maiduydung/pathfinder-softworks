@@ -15,6 +15,7 @@ export interface TeamMember {
 	intro: string;
 	description: string[];
 	image: string;
+	imagePosition?: string;
 	location: TeamLocation;
 }
 
@@ -119,7 +120,8 @@ export const team: TeamMember[] = [
 			"At Capital JDI, he sources deals across Southeast Asia, performs due diligence, and supports portfolio companies post-investment. He has contributed to seed investments in Gignite AI, Alpha Story, and Buildbob AI, and regularly judges startup competitions including Venture Star, Tech Planter, and Future Maker.",
 			"Outside VC, he serves as COO at Roscommon Systems, an AI accessibility company building screen readers for vision-impaired users. At Pathfinder, he is the connector: he knows who needs what, and makes the introduction happen.",
 		],
-		image: "/tommy_avatar.jpeg",
+		image: "/tommy_avatar.jpg",
+		imagePosition: "center 55%",
 		location: { city: "Ho Chi Minh City", country: "Vietnam", timezone: "GMT+7" },
 	},
 ];

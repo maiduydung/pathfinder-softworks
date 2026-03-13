@@ -79,6 +79,7 @@
 							src={member.image}
 							alt={member.name}
 							class="h-full w-full object-cover"
+							style={member.imagePosition ? `object-position: ${member.imagePosition}` : undefined}
 						/>
 					</div>
 					<h3
